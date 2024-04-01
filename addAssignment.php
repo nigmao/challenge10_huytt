@@ -24,7 +24,7 @@ if (isset($_POST['add']) && isset($_FILES['filename'])) {
     $ext = end($splitFileName);
     // $new_file = md5(uniqid()).'.'.$ext;
 
-    $allow_ext = ['png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'txt'];
+    $allow_ext = ['png', 'jpg', 'jpeg', 'gif', 'ppt', 'zip', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'txt', 'php'];
     if (in_array($ext, $allow_ext)) {
         if (file_exists('uploads/teacher/' . $filename)) {
             $error['file_exists_error'];
